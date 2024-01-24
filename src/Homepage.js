@@ -16,11 +16,11 @@ var val1=false, val2=false, val3=false, val4=false, val5=false;
 
 const Homepage = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
-    const [monday, setMonday] = useState(new Date(currentDate.getTime() - 2* 24 * 60 * 60 * 1000));
-    const [tuesday, setTuesday] = useState(new Date(currentDate.getTime() - 24 * 60 * 60 * 1000));
-    const [wednesday, setWednesday] = useState(new Date());
-    const [thursday, setThursday] = useState(new Date(currentDate.getTime() + 24 * 60 * 60 * 1000 ));
-    const [friday, setFriday] = useState(new Date(currentDate.getTime() + 24 * 60 * 60 * 1000 * 2));
+    const [monday, setMonday] = useState(new Date(currentDate.getTime() - 3* 24 * 60 * 60 * 1000));
+    const [tuesday, setTuesday] = useState(new Date(currentDate.getTime() - 2*24 * 60 * 60 * 1000));
+    const [wednesday, setWednesday] = useState(new Date(currentDate.getTime() - 24 * 60 * 60 * 1000));
+    const [thursday, setThursday] = useState(new Date());
+    const [friday, setFriday] = useState(new Date(currentDate.getTime() + 24 * 60 * 60 * 1000 ));
     const [centerdate, setCenterdate]= useState(new Date());
 
     const [ischecked, setIschecked]= useState(false);
@@ -39,23 +39,23 @@ const Homepage = () => {
         setCurrentDate(newDate);
         
         const newMonday = new Date(currentDate);
-        newMonday.setDate(currentDate.getDate() - 9);
+        newMonday.setDate(currentDate.getDate() - 10);
         setMonday(newMonday);
 
         const newWednesday = new Date(currentDate);
-        newWednesday.setDate(currentDate.getDate() - 7);
+        newWednesday.setDate(currentDate.getDate() - 8);
         setWednesday(newWednesday);
 
         const newThursday = new Date(currentDate);
-        newThursday.setDate(currentDate.getDate() - 6);
+        newThursday.setDate(currentDate.getDate() - 7);
         setThursday(newThursday);
 
         const newFriday = new Date(currentDate);
-        newFriday.setDate(currentDate.getDate() - 5);
+        newFriday.setDate(currentDate.getDate() - 6);
         setFriday(newFriday);
 
         const newTuesday = new Date(currentDate);
-        newTuesday.setDate(currentDate.getDate() - 8);
+        newTuesday.setDate(currentDate.getDate() - 9);
         setTuesday(newTuesday);
       };
 
@@ -65,23 +65,23 @@ const Homepage = () => {
         setCurrentDate(newDate);
 
         const newMonday = new Date(currentDate);
-        newMonday.setDate(currentDate.getDate() + 5);
+        newMonday.setDate(currentDate.getDate() + 4);
         setMonday(newMonday);
 
         const newTuesday = new Date(currentDate);
-        newTuesday.setDate(currentDate.getDate() + 6);
+        newTuesday.setDate(currentDate.getDate() + 5);
         setTuesday(newTuesday);
 
         const newWednesday = new Date(currentDate);
-        newWednesday.setDate(currentDate.getDate() + 7);
+        newWednesday.setDate(currentDate.getDate() + 6);
         setWednesday(newWednesday);
 
         const newThursday = new Date(currentDate);
-        newThursday.setDate(currentDate.getDate() + 8);
+        newThursday.setDate(currentDate.getDate() + 7);
         setThursday(newThursday);
 
         const newFriday = new Date(currentDate);
-        newFriday.setDate(currentDate.getDate() + 9);
+        newFriday.setDate(currentDate.getDate() + 8);
         setFriday(newFriday);
         
       };
